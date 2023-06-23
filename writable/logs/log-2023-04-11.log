@@ -1,0 +1,268 @@
+CRITICAL - 2023-04-11 07:43:13 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 12:57:38 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 12:58:03 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 12:58:51 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:29:25 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:33:01 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:33:54 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:39:46 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:39:47 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:39:47 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:42:10 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:42:11 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:42:37 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:42:38 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:42:38 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:20 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:21 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:21 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:29 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:29 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:30 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:45:30 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:46:29 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:46:29 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:46:54 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:46:55 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:46:55 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:48:03 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:48:54 --> Undefined array key "email"
+in APPPATH/Validation/AuthRules.php on line 30.
+ 1 APPPATH/Validation/AuthRules.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', '/data/web/virtuals/52251/virtual/www/subdom/smart/app/Validation/AuthRules.php', 30)
+ 2 SYSTEMPATH/Validation/Validation.php(312): App\Validation\AuthRules->validateUser('tttttt', 'email,password', [...], null, 'password')
+ 3 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', 'tttttt', [...], [...])
+ 4 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH/Controllers/Auth.php(70): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:48:56 --> Undefined array key "email"
+in APPPATH/Validation/AuthRules.php on line 30.
+ 1 APPPATH/Validation/AuthRules.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', '/data/web/virtuals/52251/virtual/www/subdom/smart/app/Validation/AuthRules.php', 30)
+ 2 SYSTEMPATH/Validation/Validation.php(312): App\Validation\AuthRules->validateUser('tttttt', 'email,password', [...], null, 'password')
+ 3 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', 'tttttt', [...], [...])
+ 4 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH/Controllers/Auth.php(70): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:49:23 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:49:30 --> Undefined array key "email"
+in APPPATH/Validation/AuthRules.php on line 30.
+ 1 APPPATH/Validation/AuthRules.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', '/data/web/virtuals/52251/virtual/www/subdom/smart/app/Validation/AuthRules.php', 30)
+ 2 SYSTEMPATH/Validation/Validation.php(312): App\Validation\AuthRules->validateUser('tttttt', 'email,password', [...], null, 'password')
+ 3 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', 'tttttt', [...], [...])
+ 4 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH/Controllers/Auth.php(70): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:49:31 --> Undefined array key "email"
+in APPPATH/Validation/AuthRules.php on line 30.
+ 1 APPPATH/Validation/AuthRules.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', '/data/web/virtuals/52251/virtual/www/subdom/smart/app/Validation/AuthRules.php', 30)
+ 2 SYSTEMPATH/Validation/Validation.php(312): App\Validation\AuthRules->validateUser('tttttt', 'email,password', [...], null, 'password')
+ 3 SYSTEMPATH/Validation/Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', 'tttttt', [...], [...])
+ 4 SYSTEMPATH/Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH/Controllers/Auth.php(70): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:49:45 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:51:11 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:51:26 --> Call to undefined method App\Models\AuthModel::getUserByEmail
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Auth.php(89): CodeIgniter\Model->__call('getUserByEmail', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(935): App\Controllers\Auth->appLogin()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

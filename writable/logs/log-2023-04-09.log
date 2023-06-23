@@ -1,0 +1,460 @@
+ERROR - 2023-04-09 17:03:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:03:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:03:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:04:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:04:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('?', '?')' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (\'?\', \'?\')', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:04:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:04:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(54): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:05:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:05:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:09:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:09:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES (NULL, NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-09 17:10:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('POST', NULL)' at line 1 in /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO all...', 0)
+#1 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO all...')
+#2 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO all...')
+#3 /data/web/virtuals/52251/virtual/www/subdom/smart/system/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO all...', Array)
+#4 /data/web/virtuals/52251/virtual/www/subdom/smart/app/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', Array)
+#5 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+#6 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 /data/web/virtuals/52251/virtual/www/subdom/smart/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /data/web/virtuals/52251/virtual/www/subdom/smart/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-09 17:10:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'key, value) VALUES ('POST', NULL)' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO allLog (key, value) VALUES (\'POST\', NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO allLog (key, value) VALUES (\'POST\', NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO allLog (key, value) VALUES (\'POST\', NULL)')
+ 4 SYSTEMPATH/Model.php(836): CodeIgniter\Database\BaseConnection->query('INSERT INTO allLog (key, value) VALUES (?, ?)', [...])
+ 5 APPPATH/Controllers/Auth.php(55): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->appLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

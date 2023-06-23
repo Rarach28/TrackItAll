@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+}
+
+.grid-stack-item > .grid-stack-item-content {
+  padding: 0;
+  margin: 0;
+  inset: 10px !important;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.13);
+}
+
+.location {
+  background: #F5F5F5;
+}
+
+.template {
+  background-color: #F5F5F5;
+  color: #F5F5F5 !important;
+  border-radius: 10px;
+  margin: auto;
+  border: none;
+}
+.template:focus {
+  outline: none;
+}
+
+.single-value-template {
+  overflow: hidden;
+}
+.single-value-template .cell-value, .single-value-template .cell-unit {
+  font-size: 2vw;
+}

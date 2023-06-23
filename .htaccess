@@ -1,0 +1,11 @@
+RewriteEngine On
+DirectoryIndex public/index.php
+
+# Exclude redirection for valid files and empty URI
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^ - [L]
+
+# Redirect everything else to public/index.php
+RewriteRule ^(.*)$ public/index.php/$1 [L]
