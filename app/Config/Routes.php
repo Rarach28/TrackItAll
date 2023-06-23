@@ -42,6 +42,16 @@ $routes->match(['get', 'post'], 'profile', 'Auth::profile');
 
 /**
  * --------------------------------------------------------------------
+ * Activity
+ * --------------------------------------------------------------------
+ */
+
+$routes->match(['get', 'post'], 'show', 'Activity::show'); 
+$routes->match(['get', 'post'], 'addActivity', 'Activity::add'); 
+$routes->match(['get', 'post'], 'insertActivity', 'Activity::insert'); 
+
+/**
+ * --------------------------------------------------------------------
  * Tracker
  * --------------------------------------------------------------------
  */
