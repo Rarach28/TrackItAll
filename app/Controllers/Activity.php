@@ -38,7 +38,6 @@ class Activity extends BaseController
             "title" => "Add Activity"
         ];
 
-
         return view("Activity/addActivity", $data);
     }
 
@@ -57,6 +56,13 @@ class Activity extends BaseController
 
         return redirect()->to("logout");
         
+    }
+
+    public function delete($id){
+        if($this->activityModel->checkOwnership($id))
+            $this->activityModel->delete($id);
+
+        return redirect()->to("show");
     }
 	//--------------------------------------------------------------------
 

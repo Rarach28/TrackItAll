@@ -1,6 +1,6 @@
 <?= $this->extend("Global/layout") ?>
 <?= $this->section("content") ?>
-<h1 class="text-4xl mb-2">showActivity view</h1>
+<h1 class="text-4xl mb-2">Add Activity</h1>
 
 <?= form_open(base_url("insertActivity"), [
     "class" => "",
