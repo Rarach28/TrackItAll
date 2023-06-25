@@ -11,7 +11,7 @@ class ActivityModel extends Model{
 
     // protected $beforeInsert = ['beforeInsert'];
     // protected $beforeUpdate = ['beforeUpdate'];  
-    protected $allowedFields = ['name', 'priority', 'color', 'user_id'];
+    protected $allowedFields = ['id', 'name', 'priority', 'color', 'user_id'];
 
 
 
@@ -23,14 +23,12 @@ class ActivityModel extends Model{
         return $db->query($sql, [$user_id])->getResultArray();
     }
 
-    public function checkOwnership($id){
+    public function getOne($id){
         $db = \Config\Database::connect();
         $user_id = session()->get("id");
         $sql = "SELECT * FROM activity WHERE user_id = ? AND id = ?";
-        $result = $db->query($sql, [$user_id, $id])->getResult();
-
-        if (empty($result)) return 0;
-        else return 1;
+        
+        return $db->query($sql, [$user_id, $id])->getResult()[0];
     }
 
 

@@ -35,10 +35,45 @@ class Activity extends BaseController
 
     public function add(){
         $data = [
-            "title" => "Add Activity"
+            "title" => "Add Activity",
+            "name" => "",
+            "priority" => 1,
+            "color" => "#000000",
+            "action" =>"insertActivity"
         ];
 
         return view("Activity/addActivity", $data);
+    }
+
+    public function edit($id){
+        $activity =$this->activityModel->getOne($id);
+        if(!empty($activity)){
+            $data = [
+                "title" => "Edit Activity",
+                "name" => $activity->name,
+                "priority" => $activity->priority,
+                "color" => $activity->color,
+                "action" => "updateActivity/$id"
+            ];
+    
+            return view("Activity/addActivity", $data);
+        }
+        else
+            return view("Activity/show", $data);
+        
+    }
+
+    public function update($id){
+
+        $data = [
+            "name" => $this->request->getPost("name") ?? "unset",
+            "priority" => $this->request->getPost("priority") ?? 0,
+            "color" => $this->request->getPost("color") ?? "#000000"
+        ];
+
+        if($this->activityModel->update($id, $data))
+            return redirect()->to("show");
+
     }
 
 
@@ -54,12 +89,11 @@ class Activity extends BaseController
         if($this->activityModel->insert($data))
             return redirect()->to("show");
 
-        return redirect()->to("logout");
         
     }
 
     public function delete($id){
-        if($this->activityModel->checkOwnership($id))
+        if(!empty($this->activityModel->getOne($id)))
             $this->activityModel->delete($id);
 
         return redirect()->to("show");

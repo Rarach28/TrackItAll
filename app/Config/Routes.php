@@ -48,7 +48,9 @@ $routes->match(['get', 'post'], 'profile', 'Auth::profile');
 
 $routes->match(['get', 'post'], 'show', 'Activity::show'); 
 $routes->match(['get', 'post'], 'addActivity', 'Activity::add'); 
+$routes->match(['get', 'post'], 'editActivity/(:num)', 'Activity::edit/$1'); 
 $routes->match(['get', 'post'], 'insertActivity', 'Activity::insert'); 
+$routes->match(['get', 'post'], 'updateActivity/(:num)', 'Activity::update/$1'); 
 $routes->match(['get', 'post'], 'deleteActivity/(:num)', 'Activity::delete/$1'); 
 
 /**

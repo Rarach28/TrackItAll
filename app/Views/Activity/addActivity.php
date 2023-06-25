@@ -2,7 +2,7 @@
 <?= $this->section("content") ?>
 <h1 class="text-4xl mb-2">Add Activity</h1>
 
-<?= form_open(base_url("insertActivity"), [
+<?= form_open(base_url($action), [
     "class" => "",
     "method" => "post"
 ])?>
@@ -12,7 +12,8 @@
             'class' => 'form-control',
             'name' => 'name',
             'id' => 'name',
-            "required" => true
+            "required" => true,
+            "value" => $name
         ]) ?>
 
     <label for="name">Priority<span style="color:red"> *</span></label>
@@ -21,7 +22,10 @@
             'class' => 'form-control',
             'name' => 'priority',
             'id' => 'priority',
-            "required" => true
+            "required" => true,
+            "value" => $priority,
+            "min" => 1,
+            "max" => 1000
         ]) ?>
    
    <label for="name">Color<span style="color:red"> *</span></label>
@@ -29,7 +33,8 @@
             'type' => 'color',
             'class' => 'form-control',
             'name' => 'color',
-            'id' => 'color'
+            'id' => 'color',
+            "value" => $color
         ]) ?>
 
        <button type="submit" class="btn btn-primary">Create</button> 
