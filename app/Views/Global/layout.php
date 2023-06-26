@@ -126,3 +126,11 @@
         </div>
     </div>
 </div>
+
+<div id="toastWrpapper" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;"><?= $toast ?? ""?></div>

@@ -12,7 +12,10 @@ class Tracker extends BaseController
     }
 	public function index()
 	{
-		$data = [];
+		$data = [
+			"title" => "Tracker",
+			"toast" => toast("v Konzoli zavolej toast()", "success"),
+		];
 
 		echo view('tracker', $data);
 	}
