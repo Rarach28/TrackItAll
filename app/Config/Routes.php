@@ -46,12 +46,13 @@ $routes->match(['get', 'post'], 'profile', 'Auth::profile');
  * --------------------------------------------------------------------
  */
 
-$routes->match(['get', 'post'], 'show', 'Activity::show'); 
-$routes->match(['get', 'post'], 'addActivity', 'Activity::add'); 
-$routes->match(['get', 'post'], 'editActivity/(:num)', 'Activity::edit/$1'); 
+$routes->match(['get', 'post'], 'Activity/show', 'Activity::show'); 
+$routes->match(['get', 'post'], 'Activity/add', 'Activity::add'); 
+$routes->match(['get', 'post'], 'Activity/edit/(:num)', 'Activity::edit/$1'); 
+$routes->match(['get', 'post'], 'Activity/update/(:num)', 'Activity::update/$1'); 
+$routes->match(['get', 'post'], 'Activity/delete/(:num)', 'Activity::delete/$1'); 
+
 $routes->match(['get', 'post'], 'insertActivity', 'Activity::insert'); 
-$routes->match(['get', 'post'], 'updateActivity/(:num)', 'Activity::update/$1'); 
-$routes->match(['get', 'post'], 'deleteActivity/(:num)', 'Activity::delete/$1'); 
 
 /**
  * --------------------------------------------------------------------
@@ -59,8 +60,14 @@ $routes->match(['get', 'post'], 'deleteActivity/(:num)', 'Activity::delete/$1');
  * --------------------------------------------------------------------
  */
 
-$routes->match(['get', 'post'], 'tracker', 'Tracker::index'); 
 
+ $routes->match(['get', 'post'], 'tracker', 'Tracker::index'); 
+ $routes->match(['get', 'post'], 'setup', 'Setup\Setup::index'); 
+
+
+
+ // AJAX ROUTES
+$routes->post('/ajax/setup/runDatabase', 'Setup\Setup::runDatabaseAJAX');
 
 
 /**

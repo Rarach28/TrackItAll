@@ -38,7 +38,7 @@ class Activity extends BaseController
             "title" => "Add Activity",
             "name" => "",
             "priority" => 1,
-            "color" => "#000000",
+            "color" => '#' . bin2hex(random_bytes(3)),
             "action" =>"insertActivity"
         ];
 
@@ -53,7 +53,7 @@ class Activity extends BaseController
                 "name" => $activity->name,
                 "priority" => $activity->priority,
                 "color" => $activity->color,
-                "action" => "updateActivity/$id"
+                "action" => "Activity/update/$id"
             ];
     
             return view("Activity/addActivity", $data);
@@ -68,11 +68,11 @@ class Activity extends BaseController
         $data = [
             "name" => $this->request->getPost("name") ?? "unset",
             "priority" => $this->request->getPost("priority") ?? 0,
-            "color" => $this->request->getPost("color") ?? "#000000"
+            "color" => $this->request->getPost("color") ?? '#' . bin2hex(random_bytes(3))
         ];
 
         if($this->activityModel->update($id, $data))
-            return redirect()->to("show");
+            return redirect()->to("Activity/show");
 
     }
 
@@ -82,12 +82,12 @@ class Activity extends BaseController
         $data = [
             "name" => $this->request->getPost("name") ?? "unset",
             "priority" => $this->request->getPost("priority") ?? 0,
-            "color" => $this->request->getPost("color") ?? "#000000",
+            "color" => $this->request->getPost("color") ?? '#' . bin2hex(random_bytes(3)),
             "user_id" => session()->get("id"),
         ];
 
         if($this->activityModel->insert($data))
-            return redirect()->to("show");
+            return redirect()->to("Activity/show");
 
         
     }
@@ -96,7 +96,7 @@ class Activity extends BaseController
         if(!empty($this->activityModel->getOne($id)))
             $this->activityModel->delete($id);
 
-        return redirect()->to("show");
+        return redirect()->to("Activity/show");
     }
 	//--------------------------------------------------------------------
 

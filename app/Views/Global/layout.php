@@ -27,6 +27,9 @@
     <!-- ColorPicker -->
     <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
 
+    <!-- my js -->
+    <script src="<?=base_url("/assets/js/script.js")?>"></script>
+
 
     <link rel="icon" type="image/x-icon" href="<?=base_url("/favicon.ico")?>">
 
@@ -44,10 +47,13 @@
                         <a href="<?=site_url("tracker")?>" class="nav-link align-middle px-0">
                             <i class="fa-solid fa-hourglass-half"></i> <span class="ms-1 d-none d-sm-inline">Tracker</span>
                         </a>
+                        <a href="<?=site_url("Activity/show")?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-briefcase"></i> <span class="ms-1 d-none d-sm-inline">Activities</span> 
+                        </a>
                     </li>
                     <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fa fa-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                            <i class="fa fa-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dash</span> </a>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
@@ -108,6 +114,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <li><a class="dropdown-item" href="<?= site_url("setup")?>"><i class="fa-solid fa-database me-1"></i>Setup</a></li>
                         <li><a class="dropdown-item" href="<?= site_url("logout")?>"><i class="fa-solid fa-power-off me-1"></i> Sign out</a></li>
                     </ul>
                 </div>

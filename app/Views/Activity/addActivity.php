@@ -8,36 +8,43 @@
 ])?>
     <label for="name">Name<span style="color:red"> *</span></label>
         <?= form_input([
-            'type' => 'text',
-            'class' => 'form-control',
-            'name' => 'name',
-            'id' => 'name',
+            "type" => "text",
+            "placeholder" => "Activity Name",
+            "class" => "form-control",
+            "name" => "name",
+            "id" => "name",
             "required" => true,
             "value" => $name
         ]) ?>
 
-    <label for="name">Priority<span style="color:red"> *</span></label>
+    <label for="name">Priority <span class="text-white-50">(1-100)</span><span style="color:red"> *</span></label>
         <?= form_input([
-            'type' => 'number',
-            'class' => 'form-control',
-            'name' => 'priority',
-            'id' => 'priority',
+            "type" => "number",
+            "class" => "form-control",
+            "name" => "priority",
+            "id" => "priority",
             "required" => true,
             "value" => $priority,
             "min" => 1,
-            "max" => 1000
+            "max" => 100
         ]) ?>
    
-   <label for="name">Color<span style="color:red"> *</span></label>
+   <label for="name" class="mt-1">Color<span style="color:red"> *</span></label>
         <?= form_input([
-            'type' => 'color',
-            'class' => 'form-control',
-            'name' => 'color',
-            'id' => 'color',
-            "value" => $color
+            "type" => "color",
+            "class" => "d-inline-block w-25",
+            "name" => "color",
+            "id" => "color",
+            "value" => $color,
+            "style" => "
+                width: 2rem;
+                height: 1rem;
+                padding: 0;
+            "
+
         ]) ?>
 
-       <button type="submit" class="btn btn-primary">Create</button> 
+       <button type="submit" class="btn btn-primary d-block w-100">Create</button> 
 </form>
 
 
