@@ -93,7 +93,7 @@ class Setup extends BaseController
         }
 
         if(!count($migrations)) {
-            return json_encode(['code' => '200', 'message' => 'Migrations are up to date']);
+            return json_encode(['code' => '200', 'log' => 'Migrations are up to date']);
         }
 
         foreach ($migrations as $migration) {
