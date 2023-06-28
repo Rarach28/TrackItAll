@@ -15,12 +15,12 @@ class Ajax extends BaseController
         $params = isset($_POST["params"])?$_POST["params"]:null;
         switch($_POST["action"]){
             case "testToast":
-                return toast("Test Toasty", "success").
-                toast("Primary", "primary").
-                toast("Secondary", "secondary").
-                toast("Info", "info").
-                toast("Warning Toasty", "warning").
-                toast("Danger Toasty", "danger");
+                return toast("Test Toasty","Test toast Text", "success").
+                toast("Primary","Test toast Text", "primary").
+                toast("Secondary","Test toast Text", "secondary").
+                toast("Info","Test toast Text", "info").
+                toast("Warning Toasty","Test toast Text", "warning").
+                toast("Danger Toasty","Test toast Text", "danger");
                 break;
             default:
             echo "DEFAULT AJAX CASE";

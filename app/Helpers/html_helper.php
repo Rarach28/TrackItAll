@@ -87,26 +87,26 @@ function numToRGB($num = 255255255,$plain = true ){
 }
 
 
-function toast($message = null, $type = 'success'){
+function toast($title = "", $message = "", $type = 'success'){
     $ret = "";
 
     $tempID = generateRandomString(10);
 
     $ret .= 
     '<div class="toast mb-2" role="alert" aria-live="assertive" style="display:block;" aria-atomic="true">
-        <div class="toast-body rounded-top d-flex bg-'.$type.'">
-            <strong class="me-auto">'.$message.'</strong>
+        <div class="toast-header rounded-top d-flex bg-'.$type.'">
+            <strong class="me-auto">'.$title.'</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="$(this).parent().parent().remove();"></button>
+        </div>
+        <div class="toast-body bg-'.$type.'-subtle">
+            <strong class="me-auto">'.$message.'</strong>
         </div>
         <div class="bg-dark rotate-180">
         <div class="progress" style="height: 3px;">
-            <div class="progress-bar bg-light" role="progressbar" style="width: 0%;" id="'.$tempID.'"></div>
+            <div class="progress-bar bg-'.$type.'" role="progressbar" style="width: 0%;" id="'.$tempID.'"></div>
         </div>
         </div>
-    </div>
-    <script>
-        //progress(\''.$tempID.'\');
-
+        <script>
         bar'.$tempID.' = "#'.$tempID.'";
             var progress'.$tempID.' = 0; 
                 var interval'.$tempID.' = setInterval(function() {
@@ -118,9 +118,10 @@ function toast($message = null, $type = 'success'){
                         clearInterval(interval'.$tempID.');
                     }
                 }, 100);
-    
-    
+
+
     </script>
+    </div>
     ';
 
     return $ret;
