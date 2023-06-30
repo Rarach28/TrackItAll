@@ -64,6 +64,10 @@ class Ajax extends BaseController
                 ]);
 
                 break;
+            case "updateTrackerName":
+                $this->tracker->updateTrackerName($params);
+                return toast("Success","New Name {$params['name']}","info");
+                break;
             case "toast":
                 $title = $params["title"]       ?? "Toast";
                 $message = $params["message"]   ?? "";

@@ -27,6 +27,14 @@ class Tracker extends BaseController
 			"activities" => $this->activityModel->getAll()
 		];
 
+		if(count($data["active"])>0){
+			$diffInSeconds = time() - $data["active"]["from"];
+			$data["tracked"] = [
+				"hour" => sprintf("%02d",floor($diffInSeconds / 3600)),
+				"min" => sprintf("%02d",floor(($diffInSeconds % 3600) / 60)),
+				"sec" =>sprintf("%02d",$diffInSeconds % 60)
+			];
+		}
 		echo view('tracker', $data);
 	}
 
@@ -123,6 +131,13 @@ class Tracker extends BaseController
 
 	public function deleteRecord($url){
 		return $this->trackerModel->deleteRecord($url);
+	}
+
+	public function updateTrackerName($params){
+		$name = $params["name"] ?? "(unset)";
+		$id = $this->url->get_id($params["url"],3);
+		$this->trackerModel->updateTrackerName($id,$name);
+			
 	}
 
 	//--------------------------------------------------------------------

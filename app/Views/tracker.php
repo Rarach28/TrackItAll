@@ -4,13 +4,13 @@
 
 <div class="Tracker w-100 d-flex justify-content-between align-items-center p-2 rounded bg-secondary">
     <span class="d-inline-flex align-items-center ">
-        <input id="trackerName" class="form-control text-light bg-body-emphasis" type="text" placeholder="What are you doing..." data-url=""></input>
-        <span id="trackerActivity" data-id="<?= $activities[0]["id"] ?? 0?>" class="text-muted ms-2"><?= $activities[0]["name"] ?? ""?></span>
+        <input id="trackerName" onchange="updateTrackerName(this)" class="form-control text-light bg-body-emphasis" type="text" placeholder="What are you doing..." data-url="" value="<?= $active["name"] ?? ""?>"></input>
+        <span id="trackerActivity" data-id="<?= $active["activity_id"] ?? $activities[0]["id"] ?? 0?>" class="text-muted ms-2"><?= $active["activity"] ?? $activities[0]["name"] ?? ""?></span>
     </span>
     <span class="d-flex align-items-center"> 
-        <span id="trackerTime" class="text-light" style="font-size: 1.45rem"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></span>
+        <span id="trackerTime" class="text-light" style="font-size: 1.45rem"><span id="hours"><?= $tracked["hour"]?></span>:<span id="minutes"><?= $tracked["min"]?></span>:<span id="seconds"><?= $tracked["sec"]?></span></span>
         <span class="ms-2">
-            <button style="width: 40px; background:<?= $activities[0]["color"] ?? bin2hex(random_bytes(3))?>;" id="playButton" class="btn btn-secondary d-block rounded-0 rounded-top"><i class='fa-solid fa-play'></i></button>
+            <button style="width: 40px; background:<?= $active["activity_color"] ?? $activities[0]["color"] ?? bin2hex(random_bytes(3))?>;" id="playButton" class="btn btn-secondary d-block rounded-0 rounded-top"><i class='fa-solid fa-play'></i></button>
             <div class="dropdown">
                 <button class="btn btn-secondary d-block dropdown-toggle p-0 py-1 rounded-0 rounded-bottom w-100" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
@@ -61,9 +61,16 @@
     $(document).ready(function(){
         loadHistory();
         var stopwatchInterval;
-        var hours = 0;
-        var minutes = 0;
-        var seconds = 0;
+        var hours = <?= $tracked["hour"]?>;
+        var minutes = <?= $tracked["min"]?>;
+        var seconds = <?= $tracked["sec"]?>;
+
+        if(<?= ($active)?"1==1":"0==1"?>){
+            $("#favicon").attr("href","<?=base_url("/favicon-play.ico")?>");
+            $("#trackerName").attr("data-url","<?=$active["url"]?>");
+            console.log($(this).find("svg").attr("data-icon","pause"));
+            stopwatchInterval = setInterval(updateTime, 1000);
+        }
 
         function updateTime() {
             seconds++;
@@ -182,5 +189,23 @@
             }
         });
     };
+
+    function updateTrackerName(btn){
+        $.ajax({
+            type: 'POST',
+            url: "<?=site_url("ajax");?>",
+            data: {
+                action: "updateTrackerName",
+                params: {
+                    "name": $(btn).val(),
+                    "url": $(btn).attr("data-url")
+                }
+            },
+            // async:false,
+            success: function (response) {
+               $("#toastWrpapper").append(response);
+            }
+        });
+    }
 </script>
 <?= $this->endSection() ?>
