@@ -28,20 +28,26 @@ class Url extends BaseController
         return $id;
     }
 
-    public function generate_url($device_data, $page_type_id = 0)
+    public function generate_url($source_id, $page_type_id = 0)
     {
         if ($page_type_id == 1) {
             $sql = "SELECT `name` as name
             FROM activity
             WHERE id = ?";
-            $query = $this->db->query($sql, [$device_data])->getRow();
+            $query = $this->db->query($sql, [$source_id])->getRow();
             $new_url = mb_url_title($query->name, '-', TRUE);
         } elseif ($page_type_id == 2) {
             $sql = "SELECT `name` as name
             FROM notification
             WHERE id = ?";
-            $query = $this->db->query($sql, [$device_data])->getRow();
+            $query = $this->db->query($sql, [$source_id])->getRow();
             $new_url = mb_url_title($query->name, '-', TRUE);
+        } elseif ($page_type_id == 3) {
+            $sql = "SELECT `name` as name
+            FROM tracker
+            WHERE id = ?";
+            $query = $this->db->query($sql, [$source_id])->getRow();
+            $new_url = mb_url_title($query->name."_".generateRandomString(), '-', TRUE);
         }
 
         $skip = 0;
@@ -54,15 +60,16 @@ class Url extends BaseController
         // if no URL address exist
         if (count($url) == 0) {
             $sql = "UPDATE `url` SET `default` = '0' WHERE `page_type_id` = ? AND `ident` = ?;";
-            $this->db->query($sql, [$page_type_id, $device_data]);
+            $this->db->query($sql, [$page_type_id, $source_id]);
             $sql = "INSERT INTO url (`page_type_id`, `ident`, `default`, `url`) VALUES (?, ?, ?, ?)";
-            $this->db->query($sql, [$page_type_id, $device_data, 1, $new_url]);
+            $this->db->query($sql, [$page_type_id, $source_id, 1, $new_url]);
+            return $new_url;
         } else {
             // generate new address
             $max_suffix = 0;
             foreach ($url as $key => $val) {
                 // if alternative address exist and it's default - break
-                if ($val['ident'] == $device_data && $val['page_type_id'] == $page_type_id && $val['default'] == 1) {
+                if ($val['ident'] == $source_id && $val['page_type_id'] == $page_type_id && $val['default'] == 1) {
                     $skip = 1;
                     break;
                 } else {
@@ -75,12 +82,15 @@ class Url extends BaseController
             }
             if ($skip == 0) {
                 $sql = "UPDATE `url` SET `default` = '0' WHERE `page_type_id` = ? AND `ident` = ?;";
-                $this->db->query($sql, [$page_type_id, $device_data]);
+                $this->db->query($sql, [$page_type_id, $source_id]);
                 $sql = "INSERT INTO url (`page_type_id`, `ident`, `default`, `url`) VALUES (?, ?, ?, ?)";
                 $max_suffix++;
                 $new_generated_url = $new_url . "--" . $max_suffix;
-                $this->db->query($sql, [$page_type_id, $device_data, 1, $new_generated_url]);
+                $this->db->query($sql, [$page_type_id, $source_id, 1, $new_generated_url]);
+                return $new_generated_url;
             }
+            return $val['url'];
+
         }
     }
 

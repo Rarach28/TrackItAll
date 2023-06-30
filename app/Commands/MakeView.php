@@ -77,11 +77,6 @@ class MakeView extends BaseCommand
 <?= $this->section("content") ?>
 <h1 class="text-4xl mb-2">' . $name . ' view</h1>
 
-<!-- MODAL TEMPLATES -->
-<div class="hidden">
-
-</div>
-
 <?= $this->endSection() ?>';
 
        return write_file($path . '/' . $file, $content);

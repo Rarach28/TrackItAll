@@ -76,6 +76,10 @@ class MakeSetup extends BaseCommand
         $content = '<?php
 
     $this->qry("");
+    // $this->qry("");
+    // $this->qry("");
+    // $this->qry("");
+    // $this->qry("");
 
 ?>';
 

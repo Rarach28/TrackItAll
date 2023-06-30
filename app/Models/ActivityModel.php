@@ -22,7 +22,7 @@ class ActivityModel extends Model{
         FROM activity A 
         LEFT JOIN url U on A.id = U.ident AND U.page_type_id = 1 AND U.default = 1
         WHERE user_id = ? 
-        ORDER BY priority ASC";
+        ORDER BY priority DESC";
         
         return $db->query($sql, [$user_id])->getResultArray();
     }
