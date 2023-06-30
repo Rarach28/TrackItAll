@@ -102,9 +102,9 @@ class Setup extends BaseController
             // include all files in content and run all queries
             include(APPPATH . 'Migrations/' . $migration . '.php');
             if($this->failure > 0) {
-                $this->migrationLog .= "<i class='fas fa-circle-xmark text-red-500'></i> Migration <strong>". $migration . "</strong> failed<br><hr>";
+                $this->migrationLog .= "<i class='fas fa-circle-xmark text-danger'></i> Migration <strong>". $migration . "</strong> failed<br><hr>";
             } else {
-                $this->migrationLog .= "<i class='fas fa-circle-check text-green-500'></i> Migration <strong>". $migration . "</strong> ran<br><hr>";
+                $this->migrationLog .= "<i class='fas fa-circle-check text-success'></i> Migration <strong>". $migration . "</strong> ran<br><hr>";
                 $this->setupModel->updateModule($migration);
             }
             $this->queryNum = 1;
@@ -122,12 +122,12 @@ class Setup extends BaseController
         // echo "<pre>".$txt."</pre><br />";
         try {
             $db->query($txt);
-            $this->migrationLog .= "<i class='fas fa-circle-check text-green-500'></i> " . $this->queryNum . ". Query successful<br/>";
+            $this->migrationLog .= "<i class='fas fa-circle-check text-success'></i> " . $this->queryNum . ". Query successful<br/>";
             $this->success++;
         } catch (\CodeIgniter\Database\Exceptions\DatabaseException $e) {
             // Handle the exception
             log_message('error', 'Database query error: '.$e->getMessage());
-            $this->migrationLog .= "<i class='fas fa-circle-xmark text-red-500'></i> " . $this->queryNum . ". Query failed: " . $e->getMessage() . "<br/>";
+            $this->migrationLog .= "<i class='fas fa-circle-xmark text-danger'></i> " . $this->queryNum . ". Query failed: " . $e->getMessage() . "<br/>";
             // echo "problem -----------------";
             $this->failure++;
         }

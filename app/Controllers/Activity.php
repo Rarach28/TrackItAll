@@ -3,6 +3,7 @@
  namespace App\Controllers;
 
  use App\Models\ActivityModel;
+ use App\Controllers\Url;
 
 class Activity extends BaseController
 {
@@ -10,6 +11,7 @@ class Activity extends BaseController
     public function __construct()
     {
         $this->activityModel = new ActivityModel();
+        $this->url = new Url();
     }
 
 	public function index()
@@ -45,7 +47,10 @@ class Activity extends BaseController
         return view("Activity/addActivity", $data);
     }
 
-    public function edit($id){
+    public function edit($name){
+        $id = $this->url->get_id($name, 1);
+        if($id==0)
+            return redirect()->to("logout");
         $activity =$this->activityModel->getOne($id);
         if(!empty($activity)){
             $data = [
@@ -53,7 +58,7 @@ class Activity extends BaseController
                 "name" => $activity->name,
                 "priority" => $activity->priority,
                 "color" => $activity->color,
-                "action" => "Activity/update/$id"
+                "action" => "Activity/update/$id",
             ];
     
             return view("Activity/addActivity", $data);
@@ -71,8 +76,11 @@ class Activity extends BaseController
             "color" => $this->request->getPost("color") ?? '#' . bin2hex(random_bytes(3))
         ];
 
-        if($this->activityModel->update($id, $data))
+        if($this->activityModel->update($id, $data)){
+
+            $this->url->generate_url($id, 1);
             return redirect()->to("Activity/show");
+        }
 
     }
 
@@ -86,15 +94,21 @@ class Activity extends BaseController
             "user_id" => session()->get("id"),
         ];
 
-        if($this->activityModel->insert($data))
+        if($this->activityModel->insert($data)){
+			$newId = isset($data["id"])?$data["id"]:($this->activityModel->insertID());
+			$this->url->generate_url($newId, 1);
+			
             return redirect()->to("Activity/show");
+        }
 
         
     }
 
-    public function delete($id){
+    public function delete($url){
+        $id = $this->url->get_id_and_delete($url, 1);
         if(!empty($this->activityModel->getOne($id)))
             $this->activityModel->delete($id);
+            
 
         return redirect()->to("Activity/show");
     }

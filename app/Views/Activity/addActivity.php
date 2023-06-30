@@ -17,16 +17,16 @@
             "value" => $name
         ]) ?>
 
-    <label for="name">Priority <span class="text-white-50">(1-100)</span><span style="color:red"> *</span></label>
+    <label for="name">Priority <span class="text-white-50">(1-1000)</span><span style="color:red"> *</span></label>
         <?= form_input([
             "type" => "number",
             "class" => "form-control",
             "name" => "priority",
             "id" => "priority",
-            "required" => true,
             "value" => $priority,
             "min" => 1,
-            "max" => 100
+            "max" => 1000,
+            "required" => true,
         ]) ?>
    
    <label for="name" class="mt-1">Color<span style="color:red"> *</span></label>
@@ -44,7 +44,7 @@
 
         ]) ?>
 
-       <button type="submit" class="btn btn-primary d-block w-100">Create</button> 
+       <button type="submit" class="btn btn-primary d-block w-100"><?=$title?></button> 
 </form>
 
 

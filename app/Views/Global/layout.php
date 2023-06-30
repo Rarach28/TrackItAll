@@ -2,6 +2,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+    #trackerName::placeholder {
+        color: #f8f9fa;
+    }
+</style>
+
 <title>T.I.A | <?=isset($title)?$title:""?></title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="<?= base_url('/assets/bootstrap-5.3.0/css/bootstrap.min.css');?>">
@@ -31,7 +37,9 @@
     <script src="<?=base_url("/assets/js/script.js")?>"></script>
 
 
-    <link rel="icon" type="image/x-icon" href="<?=base_url("/favicon.ico")?>">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/favicon.js/dist/favicon.min.js"></script> -->
+
+    <link id="favicon" rel="icon" type="image/x-icon" href="<?= base_url("/favicon-pause.ico") ?>">
 
 
 <div class="container-fluid h-100">
@@ -126,3 +134,117 @@
         </div>
     </div>
 </div>
+
+<div id="toastWrpapper" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;"><?= $toast ?? ""?></div>
+
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalTitle" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myModalTitle">Modal title</h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="myModalBody" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toast(title, message, type){
+    $.ajax({
+        type: 'POST',
+        url: "<?=site_url("ajax");?>",
+        data: {
+            action: "toast",
+            params: {
+                "title": title,
+                "message": message,
+                "type": type
+            }
+        },
+        success: function (response) {
+            $("#toastWrpapper").append(response);
+        }
+    });
+};
+
+function tModal(type,data){
+    $.ajax({
+        type: 'POST',
+        url: "<?=site_url("ajax");?>",
+        data: {
+            action: "modal",
+            params: {
+                "type": type,
+                "data": data,
+            }
+        },
+        // async:false,
+        success: function (result) {
+            response = JSON.parse(result);
+            $("#myModalTitle").html(response["title"])
+            $("#myModalBody").html(response["body"])
+            $("#myModal").modal("show");
+        }
+    });
+}
+
+function updateTimeTrackData(btn){
+    var timeFrom = $(btn).parent().find(".dateFrom").val();
+    var timeTo = $(btn).parent().find(".dateTo").val();
+    var url = $(btn).attr("data-url");
+
+    $.ajax({
+        type: 'POST',
+        url: "<?=site_url("ajax");?>",
+        data: {
+            action: "updateTimeTrackData",
+            params: {
+                "timeFrom": timeFrom,
+                "timeTo": timeTo,
+                "url": url
+            }
+        },
+        // async:false,
+        success: function (result) {
+            res = JSON.parse(result);
+            $("#myModal").modal("hide");
+            toast("Saved","Data Updated Successfully","success");
+
+            $("#trackHistoryRecord_"+url).find("#trackerStart_"+url).html(res["startFormated"]);
+
+            $("#trackHistoryRecord_"+url).find("#hours_"+url).html(res["hour"]);
+            $("#trackHistoryRecord_"+url).find("#minutes_"+url).html(res["min"]);
+            $("#trackHistoryRecord_"+url).find("#seconds_"+url).html(res["sec"]);
+        }
+    });
+}
+
+function deleteTrackerRecord(btn,url){
+    $.ajax({
+        type: 'POST',
+        url: "<?=site_url("ajax");?>",
+        data: {
+            action: "deleteTrackerRecord",
+            params: {
+                "url": url
+            }
+        },
+        // async:false,
+        success: function (result) {
+            $(btn).parent().parent().remove()
+        }
+    });
+}
+</script>

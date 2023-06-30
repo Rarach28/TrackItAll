@@ -18,7 +18,11 @@ class ActivityModel extends Model{
     public function getAll(){
         $db = \Config\Database::connect();
         $user_id = session()->get("id");
-        $sql = "SELECT * FROM activity WHERE user_id = ? ORDER BY priority ASC";
+        $sql = "SELECT A.*, U.url
+        FROM activity A 
+        LEFT JOIN url U on A.id = U.ident AND U.page_type_id = 1 AND U.default = 1
+        WHERE user_id = ? 
+        ORDER BY priority DESC";
         
         return $db->query($sql, [$user_id])->getResultArray();
     }
