@@ -30,21 +30,27 @@ class Url extends BaseController
 
     public function generate_url($source_id, $page_type_id = 0)
     {
-        if ($page_type_id == 1) {
+        if ($page_type_id == 1) { //activity
             $sql = "SELECT `name` as name
             FROM activity
             WHERE id = ?";
             $query = $this->db->query($sql, [$source_id])->getRow();
             $new_url = mb_url_title($query->name, '-', TRUE);
-        } elseif ($page_type_id == 2) {
+        } elseif ($page_type_id == 2) { //notification
             $sql = "SELECT `name` as name
             FROM notification
             WHERE id = ?";
             $query = $this->db->query($sql, [$source_id])->getRow();
             $new_url = mb_url_title($query->name, '-', TRUE);
-        } elseif ($page_type_id == 3) {
+        } elseif ($page_type_id == 3) { //trackerRecord
             $sql = "SELECT `name` as name
             FROM tracker
+            WHERE id = ?";
+            $query = $this->db->query($sql, [$source_id])->getRow();
+            $new_url = mb_url_title($query->name."_".generateRandomString(), '-', TRUE);
+        } elseif ($page_type_id == 4) { //Organisation
+            $sql = "SELECT `name` as name
+            FROM organisation
             WHERE id = ?";
             $query = $this->db->query($sql, [$source_id])->getRow();
             $new_url = mb_url_title($query->name."_".generateRandomString(), '-', TRUE);

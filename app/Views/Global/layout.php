@@ -1,47 +1,56 @@
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-    #trackerName::placeholder {
-        color: #f8f9fa;
-    }
-</style>
+    <style>
+        /* #trackerName::placeholder {
+            color: #f8f9fa;
+        } */
 
-<title>T.I.A | <?=isset($title)?$title:""?></title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="<?= base_url('/assets/bootstrap-5.3.0/css/bootstrap.min.css');?>">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
-        <script src="<?=base_url("/assets/bootstrap-5.3.0/js/bootstrap.bundle.min.js")?>"></script>
-        <!-- <script src="<?=base_url("/assets/bootstrap-5.3.0/js/bootstrap.js")?>"></script> -->
-    <!-- fontAwsome-->
-        <link rel="stylesheet" href="<?=base_url("/assets/fontawesome-free-6.2.1-web/css/all.css")?>">
-        <script src="<?=base_url("/assets/fontawesome-free-6.2.1-web/js/all.js")?>"></script>
-    <!-- jQuery -->
-        <script src="<?=base_url("/assets/jquery/jquery-3.6.0.min.js")?>"></script>
-        <script src="<?=base_url("/assets/jquery/jquery-ui.js")?>"></script>
-    <!-- jscolor -->
-        <!-- <script src="<?=base_url("/assets/jscolor/jscolor.js")?>"></script>
-        <link src="<?=base_url("/assets/jscolor/scriptjs.php")?>"></link> -->
-    <!-- Select2 -->
-        <link rel="stylesheet" href="<?=base_url("/assets/select2-4.1.0/css/select2.min.css")?>">
-        <script src="<?=base_url("/assets/select2-4.1.0/js/select2.min.js")?>"></script>
-    <!-- CHARTS -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        .select2-selection__choice{
+            background-color: #212529 !important;
+        }
+    </style>
+
+    <title>T.I.A | <?=isset($title)?$title:""?></title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="<?= base_url('/assets/bootstrap-5.3.0/css/bootstrap.min.css');?>">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+            <script src="<?=base_url("/assets/bootstrap-5.3.0/js/bootstrap.bundle.min.js")?>"></script>
+            <!-- <script src="<?=base_url("/assets/bootstrap-5.3.0/js/bootstrap.js")?>"></script> -->
+        <!-- fontAwsome-->
+            <link rel="stylesheet" href="<?=base_url("/assets/fontawesome-free-6.2.1-web/css/all.css")?>">
+            <script src="<?=base_url("/assets/fontawesome-free-6.2.1-web/js/all.js")?>"></script>
+        <!-- jQuery -->
+            <script src="<?=base_url("/assets/jquery/jquery-3.6.0.min.js")?>"></script>
+            <script src="<?=base_url("/assets/jquery/jquery-ui.js")?>"></script>
+        <!-- jscolor -->
+            <!-- <script src="<?=base_url("/assets/jscolor/jscolor.js")?>"></script>
+            <link src="<?=base_url("/assets/jscolor/scriptjs.php")?>"></link> -->
+        <!-- Select2 -->
+            <link rel="stylesheet" href="<?=base_url("/assets/select2-4.1.0/css/select2.min.css")?>">
+            <script src="<?=base_url("/assets/select2-4.1.0/js/select2.min.js")?>"></script>
+        <!-- CHARTS -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <!-- ColorPicker -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script> -->
+
+        <!-- my js -->
+        <script src="<?=base_url("/assets/js/script.js")?>"></script>
+
+        <!-- dateRange -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
-    <!-- ColorPicker -->
-    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
-
-    <!-- my js -->
-    <script src="<?=base_url("/assets/js/script.js")?>"></script>
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/favicon.js/dist/favicon.min.js"></script> -->
-
-    <link id="favicon" rel="icon" type="image/x-icon" href="<?= base_url("/favicon-pause.ico") ?>">
-
-
+        <link id="favicon" rel="icon" type="image/x-icon" href="<?= base_url("/favicon-pause.ico") ?>">
+</head>
+<body>
 <div class="container-fluid h-100">
     <div class="row flex-nowrap overflow-auto">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark border-end">
@@ -55,13 +64,25 @@
                         <a href="<?=site_url("tracker")?>" class="nav-link align-middle px-0">
                             <i class="fa-solid fa-hourglass-half"></i> <span class="ms-1 d-none d-sm-inline">Tracker</span>
                         </a>
-                        <a href="<?=site_url("Activity/show")?>" class="nav-link px-0 align-middle">
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?=site_url("Activity")?>" class="nav-link px-0 align-middle">
                             <i class="fa-solid fa-briefcase"></i> <span class="ms-1 d-none d-sm-inline">Activities</span> 
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?=site_url("Organisation")?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-users"></i> <span class="ms-1 d-none d-sm-inline">Organizations</span> 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?=site_url("Notification")?>" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-bell"></i> <span class="ms-1 d-none d-sm-inline">Notifications</span> 
+                        </a>
+                    </li>
                     <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fa fa-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dash</span> </a>
+                        <a href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fa-solid fa-car"></i> <span class="ms-1 d-none d-sm-inline">Dash</span> </a>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
@@ -123,6 +144,10 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="<?= site_url("setup")?>"><i class="fa-solid fa-database me-1"></i>Setup</a></li>
+                        <li><a class="dropdown-item" href="<?= site_url("Notification/refresh")?>"><i class="fa-solid fa-bell me-1"></i>Refresh Notifications</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="<?= site_url("logout")?>"><i class="fa-solid fa-power-off me-1"></i> Sign out</a></li>
                     </ul>
                 </div>
@@ -161,7 +186,7 @@
 </div>
 
 <script>
-function toast(title, message, type){
+function toast(title, message, type, persistent=false){
     $.ajax({
         type: 'POST',
         url: "<?=site_url("ajax");?>",
@@ -170,7 +195,8 @@ function toast(title, message, type){
             params: {
                 "title": title,
                 "message": message,
-                "type": type
+                "type": type,
+                "persistent": persistent
             }
         },
         success: function (response) {
@@ -248,3 +274,7 @@ function deleteTrackerRecord(btn,url){
     });
 }
 </script>
+
+
+</body>
+</html>

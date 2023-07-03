@@ -19,6 +19,10 @@ class Tracker extends BaseController
 
 	public function index()
 	{
+		// $auth_redirect = authenticate([1, 2, 3 ,4 , 5]);
+		// if ($auth_redirect) return redirect()->to($auth_redirect);
+
+
 		$data = [
 			"title" => "Tracker",
 			"toast" => toast("v Konzoli zavolej testToast()", "success"),
@@ -35,6 +39,7 @@ class Tracker extends BaseController
 				"sec" =>sprintf("%02d",$diffInSeconds % 60)
 			];
 		}
+
 		echo view('tracker', $data);
 	}
 
@@ -42,6 +47,7 @@ class Tracker extends BaseController
 	{
 		$dbData = [
 			"activity_id" => $params["activity_id"],
+			"user_id"	=> session()->get('id'),
 			"from" => time(),
 			"to" => null,
 			"active" => 1,
@@ -72,6 +78,10 @@ class Tracker extends BaseController
 			"to"	=> $t["to"],
 			"url"	=> $t["url"],
 		]);
+	}
+
+	public function getAllByActivity($id){
+		return $this->trackerModel->getAllByActivity($id);
 	}
 
 	public function loadHistory(){

@@ -163,6 +163,16 @@ class AuthModel extends Model{
     }
 
    
+    /*************************************************************/
+
+
+
+    /*************************************************************/
+
+
+    public function getByEmails($emails){
+        return $this->whereIn('email', $emails)->get()->getResultArray();
+    }
 
 
 }

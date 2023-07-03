@@ -87,42 +87,43 @@ function numToRGB($num = 255255255,$plain = true ){
 }
 
 
-function toast($title = "", $message = "", $type = 'success'){
+function toast($title = "", $message = "", $type = 'success',$persistent=false,$custCss=""){
     $ret = "";
 
     $tempID = generateRandomString(10);
 
     $ret .= 
-    '<div class="toast mb-2" role="alert" aria-live="assertive" style="display:block;" aria-atomic="true">
-        <div class="toast-header rounded-top d-flex bg-'.$type.'">
-            <strong class="me-auto">'.$title.'</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="$(this).parent().parent().remove();"></button>
+    '<div class="toast mb-2 '.$custCss.'" role="alert" aria-live="assertive" style="display:block;" aria-atomic="true">
+        <div class="fw-bold toast-header rounded-top d-flex bg-'.$type.'">
+            <span class="toast-title">'.$title.'</span>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close" onclick="$(this).parent().parent().remove();"></button>
         </div>
-        <div class="toast-body bg-'.$type.'-subtle">
-            <strong class="me-auto">'.$message.'</strong>
+        <div class="toast-body text-dark fw-bold bg-'.$type.'-subtle">
+            <pre class="toast-body-text">'.$message.'</pre>
         </div>
         <div class="bg-dark rotate-180">
-        <div class="progress" style="height: 3px;">
+        <div class="progress rounded-bottom-5" style="height: 3px;">
             <div class="progress-bar bg-'.$type.'" role="progressbar" style="width: 0%;" id="'.$tempID.'"></div>
         </div>
-        </div>
-        <script>
-        bar'.$tempID.' = "#'.$tempID.'";
-            var progress'.$tempID.' = 0; 
-                var interval'.$tempID.' = setInterval(function() {
-                    progress'.$tempID.' += 3;
-                    $(bar'.$tempID.').css("width", progress'.$tempID.' + "%");
-                    if (progress'.$tempID.' >= 100) {
-                        console.log($(bar'.$tempID.').parent().parent().parent());
-                        $(bar'.$tempID.').parent().parent().parent().fadeOut(1000);
-                        clearInterval(interval'.$tempID.');
-                    }
-                }, 100);
+        </div>';
+        if($persistent=="false"){
+            $ret .='<script>
+            bar'.$tempID.' = "#'.$tempID.'";
+                var progress'.$tempID.' = 0; 
+                    var interval'.$tempID.' = setInterval(function() {
+                        progress'.$tempID.' += 3;
+                        $(bar'.$tempID.').css("width", progress'.$tempID.' + "%");
+                        if (progress'.$tempID.' >= 100) {
+                            console.log($(bar'.$tempID.').parent().parent().parent());
+                            $(bar'.$tempID.').parent().parent().parent().fadeOut(1000);
+                            clearInterval(interval'.$tempID.');
+                        }
+                    }, 100);
 
 
-    </script>
-    </div>
-    ';
+        </script>';
+        }
+        $ret .= '</div>';
 
     return $ret;
 }

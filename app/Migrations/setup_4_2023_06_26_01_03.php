@@ -22,6 +22,7 @@
     $this->qry("CREATE TABLE `tracker` (
         `id` int NOT NULL AUTO_INCREMENT,
         `activity_id` int(11) NOT NULL,
+        `user_id` int(11) NOT NULL,
         `name` varchar(100) NOT NULL,
         `from` int(11) NULL,
         `to` int(11) NULL,

@@ -72,7 +72,8 @@ class Ajax extends BaseController
                 $title = $params["title"]       ?? "Toast";
                 $message = $params["message"]   ?? "";
                 $type = $params["type"]         ?? "info";
-                return toast($title,$message,$type);
+                $persistent = $params["persistent"]         ?? "false";
+                return toast($title,$message,$type,$persistent);
                 break;
             case "startTracker":
                 return $this->tracker->startTracker($params);

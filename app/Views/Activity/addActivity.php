@@ -48,5 +48,7 @@
 </form>
 
 
+<?= $records ?? ""?>
+
 
 <?= $this->endSection() ?>

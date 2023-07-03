@@ -8,7 +8,7 @@
         <span id="trackerActivity" data-id="<?= $active["activity_id"] ?? $activities[0]["id"] ?? 0?>" class="text-muted ms-2"><?= $active["activity"] ?? $activities[0]["name"] ?? ""?></span>
     </span>
     <span class="d-flex align-items-center"> 
-        <span id="trackerTime" class="text-light" style="font-size: 1.45rem"><span id="hours"><?= $tracked["hour"]?></span>:<span id="minutes"><?= $tracked["min"]?></span>:<span id="seconds"><?= $tracked["sec"]?></span></span>
+        <span id="trackerTime" class="text-light" style="font-size: 1.45rem"><span id="hours"><?= $tracked["hour"] ?? "00"?></span>:<span id="minutes"><?= $tracked["min"] ?? "00"?></span>:<span id="seconds"><?= $tracked["sec"] ?? "00"?></span></span>
         <span class="ms-2">
             <button style="width: 40px; background:<?= $active["activity_color"] ?? $activities[0]["color"] ?? bin2hex(random_bytes(3))?>;" id="playButton" class="btn btn-secondary d-block rounded-0 rounded-top"><i class='fa-solid fa-play'></i></button>
             <div class="dropdown">
@@ -61,13 +61,13 @@
     $(document).ready(function(){
         loadHistory();
         var stopwatchInterval;
-        var hours = <?= $tracked["hour"]?>;
-        var minutes = <?= $tracked["min"]?>;
-        var seconds = <?= $tracked["sec"]?>;
+        var hours = <?= $tracked["hour"] ?? 0?>;
+        var minutes = <?= $tracked["min"] ?? 0?>;
+        var seconds = <?= $tracked["sec"] ?? 0?>;
 
-        if(<?= ($active)?"1==1":"0==1"?>){
+        if(<?= (isset($active["url"]))?"1==1":"0==1"?>){
             $("#favicon").attr("href","<?=base_url("/favicon-play.ico")?>");
-            $("#trackerName").attr("data-url","<?=$active["url"]?>");
+            $("#trackerName").attr("data-url","<?=$active["url"] ?? ""?>");
             console.log($(this).find("svg").attr("data-icon","pause"));
             stopwatchInterval = setInterval(updateTime, 1000);
         }
@@ -89,7 +89,7 @@
 
         $("#playButton").click(function(){
             if($(this).find("svg").attr("data-icon")=="pause"){ //pause
-                $("#favicon").attr("href","<?=base_url("/favicon-pause.ico")?>");
+                // $("#favicon").attr("href","<?=base_url("/favicon-pause.ico")?>");
 
 
                 console.log($(this).find("svg").attr("data-icon","play"));
@@ -106,7 +106,7 @@
 
                 stopTracker();
             }else{  //play
-                $("#favicon").attr("href","<?=base_url("/favicon-play.ico")?>");
+                // $("#favicon").attr("href","<?=base_url("/favicon-play.ico")?>");
                 startTracker();
                 console.log($(this).find("svg").attr("data-icon","pause"));
                 stopwatchInterval = setInterval(updateTime, 1000);

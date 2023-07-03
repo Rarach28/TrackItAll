@@ -5,6 +5,8 @@
  use App\Models\ActivityModel;
  use App\Controllers\Url;
 
+ use App\Controllers\Tracker;
+
 class Activity extends BaseController
 {
 
@@ -12,17 +14,11 @@ class Activity extends BaseController
     {
         $this->activityModel = new ActivityModel();
         $this->url = new Url();
+        $this->tracker = new Tracker();
+
     }
 
-	public function index()
-	{
-		// echo view('templates/header');
-		echo view('test');
-		// echo view('templates/footer');
-		
-	}
-
-    public function show(){
+    public function index(){
       
         $activity = $this->activityModel->getAll();
 
@@ -52,19 +48,34 @@ class Activity extends BaseController
         if($id==0)
             return redirect()->to("logout");
         $activity =$this->activityModel->getOne($id);
+        
         if(!empty($activity)){
+
+            $trackerRecors = $this->tracker->getAllByActivity($id);
+            $ret = "";
+            foreach($trackerRecors as $t){
+                $ret .= $this->tracker->loadTrackDiv([
+                    "color" => $t["activity_color"],
+                    "activity"	=> $t["activity"],
+                    "name"	=> $t["name"],
+                    "from"	=> $t["from"],
+                    "to"	=> $t["to"],
+                    "url"	=> $t["url"],
+                ]);
+            }
             $data = [
                 "title" => "Edit Activity",
                 "name" => $activity->name,
                 "priority" => $activity->priority,
                 "color" => $activity->color,
                 "action" => "Activity/update/$id",
+                "records" => $ret ?? "",
             ];
     
             return view("Activity/addActivity", $data);
         }
         else
-            return view("Activity/show", $data);
+            return view("Activity", $data);
         
     }
 
@@ -79,7 +90,7 @@ class Activity extends BaseController
         if($this->activityModel->update($id, $data)){
 
             $this->url->generate_url($id, 1);
-            return redirect()->to("Activity/show");
+            return redirect()->to("Activity");
         }
 
     }
@@ -91,14 +102,16 @@ class Activity extends BaseController
             "name" => $this->request->getPost("name") ?? "unset",
             "priority" => $this->request->getPost("priority") ?? 0,
             "color" => $this->request->getPost("color") ?? '#' . bin2hex(random_bytes(3)),
-            "user_id" => session()->get("id"),
         ];
 
         if($this->activityModel->insert($data)){
 			$newId = isset($data["id"])?$data["id"]:($this->activityModel->insertID());
+
+            $this->activityModel->query("INSERT INTO activity_user (activity_id,user_id) VALUES (?,?)",[ $newId,session()->get("id")]);
+
 			$this->url->generate_url($newId, 1);
 			
-            return redirect()->to("Activity/show");
+            return redirect()->to("Activity");
         }
 
         
@@ -110,7 +123,7 @@ class Activity extends BaseController
             $this->activityModel->delete($id);
             
 
-        return redirect()->to("Activity/show");
+        return redirect()->to("Activity");
     }
 	//--------------------------------------------------------------------
 

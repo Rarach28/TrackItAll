@@ -28,11 +28,12 @@ class Auth implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // IF THE USER IS NOT LOGGED IN REDIRECT TO LOGIN
-        if(! session()->get('isLoggedIn')){          
-              
-            return redirect()->to('/');
-
-           }
+        if (!session()->get('isLoggedIn')) {
+			$allowedPaths = ["/setup"];
+			if (!in_array($request->getPath(), $allowedPaths)) {
+				return redirect()->to('/logout');
+			}
+		}
 
         // IF WE PASS A ROLE ARGUMENT IN THE ROUTE
         // CHECK IT MATCHES ROLE OF THE USER OR

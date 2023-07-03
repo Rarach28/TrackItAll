@@ -40,30 +40,54 @@ $routes->get('logout', 'Auth::logout'); // LOGOUT
 
 $routes->match(['get', 'post'], 'profile', 'Auth::profile'); 
 
-/**
- * --------------------------------------------------------------------
- * Activity
- * --------------------------------------------------------------------
- */
+// $routes->group('', ['filter' => 'auth'], function ($routes) {
+		/**
+		 * --------------------------------------------------------------------
+		 * Activity
+		 * --------------------------------------------------------------------
+		 */
 
-$routes->match(['get', 'post'], 'Activity/show', 'Activity::show'); 
-$routes->match(['get', 'post'], 'Activity/add', 'Activity::add'); 
-$routes->match(['get', 'post'], 'Activity/edit/(:num)', 'Activity::edit/$1'); 
-$routes->match(['get', 'post'], 'Activity/update/(:num)', 'Activity::update/$1'); 
-$routes->match(['get', 'post'], 'Activity/delete/(:num)', 'Activity::delete/$1'); 
+		$routes->match(['get', 'post'], 'Activity', 'Activity::index'); 
+		$routes->match(['get', 'post'], 'Activity/add', 'Activity::add'); 
+		$routes->match(['get', 'post'], 'Activity/edit/(:num)', 'Activity::edit/$1'); 
+		$routes->match(['get', 'post'], 'Activity/update/(:num)', 'Activity::update/$1'); 
+		$routes->match(['get', 'post'], 'Activity/delete/(:num)', 'Activity::delete/$1'); 
 
-$routes->match(['get', 'post'], 'insertActivity', 'Activity::insert'); 
+		$routes->match(['get', 'post'], 'insertActivity', 'Activity::insert'); 
 
-/**
- * --------------------------------------------------------------------
- * Tracker
- * --------------------------------------------------------------------
- */
+		/**
+		 * --------------------------------------------------------------------
+		 * Tracker
+		 * --------------------------------------------------------------------
+		 */
 
 
- $routes->match(['get', 'post'], 'tracker', 'Tracker::index'); 
- $routes->match(['get', 'post'], 'setup', 'Setup\Setup::index'); 
+		$routes->match(['get', 'post'], 'setup', 'Setup\Setup::index'); 
 
+	/**
+	 * --------------------------------------------------------------------
+	 * Notification
+	 * --------------------------------------------------------------------
+	 */
+
+	$routes->match(['get', 'post'], 'Notification', 'Notification::index'); 
+	$routes->match(['get', 'post'], 'Notification/refresh', 'Notification::refresh'); 
+	$routes->match(['get', 'post'], 'Notification/add', 'Notification::add'); 
+	$routes->match(['get', 'post'], 'Notification/add', 'Notification::add'); 
+
+
+	/**
+	 * --------------------------------------------------------------------
+	 * Organisation
+	 * --------------------------------------------------------------------
+	 */
+
+	 $routes->match(['get', 'post'], 'Organisation', 'Organisation::index'); 
+	 $routes->match(['get', 'post'], 'Organisation/add', 'Organisation::add'); 
+	 $routes->match(['get', 'post'], 'Organisation/detail/(:any)', 'Organisation::detail/$1'); 
+	 
+	 $routes->match(['get', 'post'], 'createOrganisation', 'Organisation::createNew'); 
+// });
 
 
  // AJAX ROUTES
@@ -88,6 +112,8 @@ $routes->get('/setup', 'Setup\Setup::index');
  */
 
 $routes->group('', ['filter' => 'auth:Role,1'], function ($routes) {
+	$routes->match(['get', 'post'], 'tracker', 'Tracker::index'); 
+
 
 	$routes->get('superadmin', 'Superadmin::index'); // SUPER ADMIN DASHBOARD
 	$routes->match(['get', 'post'], 'superadmin/profile', 'Auth::profile'); 

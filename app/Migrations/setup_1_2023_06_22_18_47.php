@@ -2,12 +2,17 @@
 
     $this->qry("CREATE TABLE `activity` (
         `id` int NOT NULL AUTO_INCREMENT,
-        `user_id` int NOT NULL,
         `name` varchar(50) NOT NULL,
         `color` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
         `priority` int NOT NULL,
         PRIMARY KEY (`id`)
       ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;");
+    $this->qry("CREATE TABLE `activity_user` (
+      `id` int NOT NULL AUTO_INCREMENT,
+      `activity_id` int(11) NOT NULL,
+      `user_id` int(11) NOT NULL,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;");
     $this->qry("CREATE TABLE `allLog` (
         `id` int NOT NULL AUTO_INCREMENT,
         `timestamp` int NOT NULL,
@@ -57,9 +62,11 @@
         PRIMARY KEY (`id`)
       ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;");
    
-        $this->qry("INSERT INTO activity (user_id,name,color,priority) VALUES
-        (1,'WORK','#0040ff',100),
-        (1,'School','#ffc800',5);");
+        $this->qry("INSERT INTO activity (name,color,priority) VALUES
+        ('WORK','#0040ff',100),
+        ('School','#ffc800',5);");
+        $this->qry("INSERT INTO activity_user (activity_id,user_id) VALUES
+        (1,1),(2,1);");
         $this->qry("INSERT INTO users (firstname,lastname,email,password,reset_token,reset_expire,activated,activate_token,activate_expire,`role`,created_at,updated_at,deleted_at) VALUES
         ('Tomáš','Hotárek','tom@hot.cz','\$argon2id\$v=19\$m=65536,t=4,p=1\$U3lzOXlqS05SbkZWekRUaQ\$zStIdsZ1J9EpAhKMUOB642VqnsHb0pmxMYp8/JFsOlA','',NULL,1,NULL,NULL,1,'2023-04-06 23:43:16','2023-04-06 23:43:16',NULL),
         ('Super','User','super@user.cz','\$argon2id\$v=19\$m=65536,t=4,p=1\$U3lzOXlqS05SbkZWekRUaQ\$zStIdsZ1J9EpAhKMUOB642VqnsHb0pmxMYp8/JFsOlA','',NULL,1,NULL,NULL,1,'2023-04-06 23:43:16','2023-04-06 23:43:16',NULL),
